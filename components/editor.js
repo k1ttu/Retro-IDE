@@ -220,9 +220,9 @@ end program Main
   const options2 = {
     method: "POST",
     headers: {
-      "content-type": "application/json",
-      "X-RapidAPI-Key": "c7880f3968mshad5d5e09121074fp1dfe51jsn9292753183d2",
-      "X-RapidAPI-Host": "chatgpt-42.p.rapidapi.com",
+      'content-type': 'application/json',
+      'X-RapidAPI-Key': 'aa386c2696msh594fdee1d036dbcp18658djsn8274ba14bfc1',
+      'X-RapidAPI-Host': 'chatgpt-42.p.rapidapi.com'
     },
     body: JSON.stringify({
       messages: [
