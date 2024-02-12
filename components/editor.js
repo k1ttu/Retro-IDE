@@ -308,13 +308,11 @@ end program Main
         }
       })
       .join("\n");
-      
-    console.log(inp);
-    console.log(formattedCode);
+
     setCode(formattedCode);
   }
 
-  function format(){
+  function format() {
     formatCode(inp);
     setInp("");
   }
