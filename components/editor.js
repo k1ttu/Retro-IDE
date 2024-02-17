@@ -4,12 +4,6 @@ import { Listbox, Switch, Transition } from "@headlessui/react";
 import "../app/globals.css";
 
 export default function Editor() {
-  const boilerCodes = [
-    {
-      lang: "",
-      code: "",
-    },
-  ];
   const res1 = {
     output: "",
   };
@@ -241,7 +235,7 @@ end program Main
   //   end
 
   //   Funtions
-  let audio = new Audio("./keypress.mp3");
+  const [audio, setAudio] = useState( null );
   const [play, setPlay] = useState(0);
   const runCode = async () => {
     try {
@@ -318,8 +312,9 @@ end program Main
   }
 
   function updateCode(e) {
+    setAudio( new Audio( './keypress.mp3' ));
     if (play % 2 == 0) {
-      audio.play();
+      audio?.play();
     }
     setPlay(play + 1);
     setCode(e.target.value);
